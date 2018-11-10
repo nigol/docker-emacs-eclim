@@ -44,10 +44,10 @@ RUN (mkdir /home/docker/.ssh && \
     chmod 600 /home/docker/.ssh/id_rsa)
 
 # Install Eclipse                                                                                              
-RUN (wget -O /home/docker/eclipse.tar.gz \ 
-https://s3-eu-west-1.amazonaws.com/eclipse-nigol/eclipse-jee-oxygen-R-linux-gtk-x86_64.tar.gz)
-RUN (tar xzvf eclipse.tar.gz -C /home/docker && \
-     rm eclipse.tar.gz)
+RUN (wget -O /home/docker/eclipse.tar \ 
+https://s3-eu-west-1.amazonaws.com/eclipse-nigol/eclipse-jee-oxygen-R-linux-gtk-x86_64.tar)
+RUN (tar xvf eclipse.tar.gz -C /home/docker && \
+     rm eclipse.tar)
 RUN (mkdir /home/docker/workspace)
 
 # Install eclim
