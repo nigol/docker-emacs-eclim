@@ -45,7 +45,7 @@ RUN (mkdir /home/docker/.ssh && \
 
 # Install Eclipse                                                                                              
 RUN (wget -O /home/docker/eclipse.tar.gz \ 
-http://mirror.switch.ch/eclipse/technology/epp/downloads/release/oxygen/R/eclipse-jee-oxygen-R-linux-gtk-x86_64.tar.gz)
+https://s3-eu-west-1.amazonaws.com/eclipse-nigol/eclipse-jee-oxygen-R-linux-gtk-x86_64.tar.gz)
 RUN (tar xzvf eclipse.tar.gz -C /home/docker && \
      rm eclipse.tar.gz)
 RUN (mkdir /home/docker/workspace)
@@ -53,7 +53,7 @@ RUN (mkdir /home/docker/workspace)
 # Install eclim
 RUN (cd /home/docker && \
 wget -O /home/docker/eclim.jar \ 
-https://github.com/ervandew/eclim/releases/download/2.7.0/eclim_2.7.0.jar && \
+https://s3-eu-west-1.amazonaws.com/eclipse-nigol/eclim_2.7.0.jar && \
      java -Dvim.files=$HOME/.vim -Declipse.home=/home/docker/eclipse -jar eclim.jar install)
 
 USER root
