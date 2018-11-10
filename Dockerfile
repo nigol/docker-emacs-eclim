@@ -46,7 +46,7 @@ RUN (mkdir /home/docker/.ssh && \
 # Install Eclipse                                                                                              
 RUN (wget -O /home/docker/eclipse.tar \ 
 https://s3-eu-west-1.amazonaws.com/eclipse-nigol/eclipse-jee-oxygen-R-linux-gtk-x86_64.tar)
-RUN (tar xvf eclipse.tar.gz -C /home/docker && \
+RUN (tar xvf eclipse.tar -C /home/docker && \
      rm eclipse.tar)
 RUN (mkdir /home/docker/workspace)
 
